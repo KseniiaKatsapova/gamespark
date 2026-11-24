@@ -2,14 +2,14 @@
 require 'db.php';
 require 'includes/header.php';
 
-// Read the filters from the URL (?zoeken=elden&status=wishlist)
+// filters
 $zoeken   = $_GET['zoeken']   ?? '';
 $platform = $_GET['platform'] ?? '';
 $genre    = $_GET['genre']    ?? '';
 $status   = $_GET['status']   ?? '';
 $rating   = $_GET['rating']   ?? '';
 
-// Build the query: only add a condition when a filter is filled in
+// query filters
 $sql = "SELECT * FROM games WHERE 1=1";
 $params = [];
 
