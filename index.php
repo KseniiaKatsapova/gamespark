@@ -32,6 +32,9 @@ $statuses  = ['uitgespeeld' => 'Uitgespeeld', 'speelt nu' => 'Speelt nu', 'wishl
 ?>
 
 <h1>Overzicht</h1>
+<?php if ($role === 'admin'): ?>
+  <a href="/create.php" class="btn">+ Nieuwe game</a>
+<?php endif; ?>
 
 <form method="get" class="filters">
   <input type="text" name="zoeken" placeholder="Zoeken" value="<?= e($zoeken) ?>">
